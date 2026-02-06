@@ -1,40 +1,265 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Academic Record</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Academic Grades | MUMS</title>
+
   <style>
-    body { font-family: Arial; background:#fff; }
-    table { width:90%; margin:30px auto; border-collapse: collapse; }
-    th, td { padding:10px; border:1px solid #ccc; }
-    th { background:#e8f0e0; }
-    .topbar {
-      background:#d9534f;
+    body{
+      margin:0;
+      font-family: "Segoe UI", Arial, sans-serif;
+      background:#f5f7fa;
+    }
+
+    /* Top Header */
+    header{
+      background:#e05a54;
+      padding:10px 20px;
+      color:#fff;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+    }
+    header span{
+      font-size:15px;
+      font-weight:500;
+    }
+    header a{
+      color:#fff;
+      text-decoration:none;
+      font-size:14px;
+    }
+
+    /* Container */
+    .container{
+      max-width:1150px;
+      margin:20px auto;
+      background:#fff;
+      padding:15px 20px 25px;
+      border-radius:6px;
+      box-shadow:0 4px 14px rgba(0,0,0,.08);
+    }
+
+    /* Semester menu */
+    .sem-menu{
+      display:flex;
+      gap:8px;
+      flex-wrap:wrap;
+      margin-bottom:14px;
+    }
+    .sem-menu div{
+      background:#e46b5d;
+      color:#fff;
+      padding:8px 14px;
+      border-radius:6px;
+      font-size:14px;
+      cursor:default;
+    }
+
+    /* Table controls */
+    .table-controls{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      font-size:14px;
+      margin-bottom:10px;
+    }
+    select,input{
+      padding:5px 8px;
+      border:1px solid #cbd5e1;
+      border-radius:4px;
+    }
+
+    /* Table */
+    table{
+      width:100%;
+      border-collapse:collapse;
+    }
+    th,td{
+      border:1px solid #e5e7eb;
       padding:10px;
-      color:white;
-      text-align:right;
+      font-size:14px;
+    }
+    th{
+      background:#e9f0df;
+      text-align:left;
+    }
+    td:nth-child(n+2){
+      text-align:center;
+    }
+
+    /* CGPA */
+    .cgpa{
+      text-align:center;
+      font-size:20px;
+      font-weight:600;
+      margin:18px 0 10px;
+    }
+
+    /* Pagination */
+    .pagination{
+      display:flex;
+      justify-content:center;
+      gap:10px;
+      margin:15px 0;
+      font-size:14px;
+    }
+    .pagination span{
+      padding:6px 12px;
+      border:1px solid #cbd5e1;
+      border-radius:4px;
+      background:#f8fafc;
+    }
+    .pagination .active{
+      background:#94a3b8;
+      color:#fff;
+    }
+
+    .footer{
+      text-align:left;
+      font-size:13px;
+      color:#475569;
+      margin-top:5px;
     }
   </style>
 </head>
+
 <body>
 
-<div class="topbar">
-  Student Portal | <a href="index.html" style="color:white;">Logout</a>
+<header>
+  <span>Student Portal</span>
+  <a href="index.html">Logout</a>
+</header>
+
+<div class="container">
+
+  <!-- Semester Menu -->
+  <div class="sem-menu">
+    <div>Menu</div>
+    <div>1st Sem</div>
+    <div>2nd Sem</div>
+    <div>3rd Sem</div>
+    <div>4th Sem</div>
+    <div>5th Sem</div>
+    <div>6th Sem</div>
+    <div>7th Sem</div>
+    <div>8th Sem</div>
+  </div>
+
+  <!-- Table Controls -->
+  <div class="table-controls">
+    <div>Show
+      <select>
+        <option selected>10</option>
+      </select>
+      entries
+    </div>
+    <div>Search:
+      <input type="text"/>
+    </div>
+  </div>
+
+  <!-- Grades Table -->
+  <table>
+    <thead>
+      <tr>
+        <th>Course</th>
+        <th>GPB4 PEN</th>
+        <th>Penalty</th>
+        <th>Net GP</th>
+        <th>Grade</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Workshop Practice</td>
+        <td>8.50</td>
+        <td>0.00</td>
+        <td>8.50</td>
+        <td>A</td>
+      </tr>
+      <tr>
+        <td>Physics Lab</td>
+        <td>8.25</td>
+        <td>0.00</td>
+        <td>8.25</td>
+        <td>A</td>
+      </tr>
+      <tr>
+        <td>Physics</td>
+        <td>8.00</td>
+        <td>0.00</td>
+        <td>8.00</td>
+        <td>A</td>
+      </tr>
+      <tr>
+        <td>Mathematics I Calculus, ODE and Complex Analysis</td>
+        <td>8.10</td>
+        <td>0.00</td>
+        <td>8.10</td>
+        <td>A</td>
+      </tr>
+      <tr>
+        <td>Introduction to Programming using C Lab</td>
+        <td>8.25</td>
+        <td>0.00</td>
+        <td>8.25</td>
+        <td>A</td>
+      </tr>
+      <tr>
+        <td>Introduction to Programming using C</td>
+        <td>8.00</td>
+        <td>0.00</td>
+        <td>8.00</td>
+        <td>A</td>
+      </tr>
+      <tr>
+        <td>Communication Skills I : English for Communication Lab</td>
+        <td>8.00</td>
+        <td>0.00</td>
+        <td>8.00</td>
+        <td>A</td>
+      </tr>
+      <tr>
+        <td>Communication Skills I : English for Communication</td>
+        <td>8.50</td>
+        <td>0.00</td>
+        <td>8.50</td>
+        <td>A</td>
+      </tr>
+      <tr>
+        <td>Basic Mechanical Engineering</td>
+        <td>8.10</td>
+        <td>0.00</td>
+        <td>8.10</td>
+        <td>A</td>
+      </tr>
+      <tr>
+        <td>Basic Electronics Lab</td>
+        <td>8.20</td>
+        <td>0.00</td>
+        <td>8.20</td>
+        <td>A</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- CGPA -->
+  <div class="cgpa">CGPA: 8.05</div>
+
+  <!-- Pagination -->
+  <div class="pagination">
+    <span>Previous</span>
+    <span class="active">1</span>
+    <span>2</span>
+    <span>Next</span>
+  </div>
+
+  <div class="footer">Showing 1 to 10 of 11 entries</div>
+
 </div>
-
-<table>
-  <tr>
-    <th>Course</th>
-    <th>GP</th>
-    <th>Penalty</th>
-    <th>Net GP</th>
-    <th>Grade</th>
-  </tr>
-  <tr><td>Physics</td><td>8.00</td><td>0.00</td><td>8.00</td><td>A</td></tr>
-  <tr><td>Mathematics</td><td>8.10</td><td>0.00</td><td>8.10</td><td>A</td></tr>
-  <tr><td>Programming in C</td><td>8.00</td><td>0.00</td><td>8.00</td><td>A</td></tr>
-</table>
-
-<h3 style="text-align:center;">CGPA: 8.05</h3>
 
 </body>
 </html>
+
