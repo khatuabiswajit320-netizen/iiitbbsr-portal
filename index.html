@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Student Academic Portal</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f6f8;
+    }
+    .login-box {
+      width: 350px;
+      margin: 100px auto;
+      padding: 20px;
+      background: white;
+      border-radius: 6px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    input, button {
+      width: 100%;
+      padding: 10px;
+      margin-top: 10px;
+    }
+    button {
+      background: #b23b3b;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+<div class="login-box">
+  <h3>Student Login</h3>
+  <input id="uid" placeholder="Student ID">
+  <input id="pwd" type="password" placeholder="Password">
+  <button onclick="login()">Login</button>
+  <p id="msg" style="color:red;"></p>
+</div>
+
+<script>
+function login() {
+  const id = document.getElementById("uid").value;
+  const pw = document.getElementById("pwd").value;
+
+  if (id === "B425020" && pw === "Biswajit@123") {
+    window.location.href = "grades.html";
+  } else {
+    document.getElementById("msg").innerText = "Invalid credentials";
+  }
+}
+</script>
+
+</body>
+</html>
